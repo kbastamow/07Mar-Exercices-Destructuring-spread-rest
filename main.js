@@ -164,14 +164,31 @@ console.log(maximaManana)
 // console.log(maximaHoy)
 // console.log(maximaManana)
 
+// DONE using SET
 
 function onlyUniques(...values) {
     const unique = new Set(values);
     return Array.from(unique);
 }
-
 console.log(onlyUniques('gato', 'pollo', 'cerdo', 'cerdo'));
 console.log(onlyUniques(1, 1, 2, 2, 3, 6, 7, 8));
+
+
+//WITHOUT SET
+
+function onlyUniquesTwo(...values) {
+    const unique = [];
+    for (const value of values) {
+       if (!unique.includes(value)) {
+            unique.push(value);
+        }   
+    }
+    return unique;
+}
+
+console.log(onlyUniquesTwo('gato', 'pollo', 'cerdo', 'cerdo'));
+console.log(onlyUniquesTwo(1, 1, 2, 2, 3, 6, 7, 8));
+
 
 
 
